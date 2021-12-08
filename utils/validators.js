@@ -1,20 +1,20 @@
 /* Añaden los estilos de error o exito a los elementos html */
 
-export function showError(input, message) {
+function showError(input, message) {
     const formControl = input.parentElement;
     formControl.className = "form-control error";
     const small = formControl.querySelector("small");
     small.innerText = message;
 }
 
-export function showSuccess(input) {
+function showSuccess(input) {
     const formControl = input.parentElement;
     formControl.className = "form-control success";
 }
 
 /* Retorna el nombre del input */
 
-export function getInputName(input) {
+function getInputName(input) {
     return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
 
